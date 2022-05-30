@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonsterHunter", "MonsterHunter.csproj", "{15F9F63F-5386-405F-91E5-91502F2F07B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMonsterHunter", "..\TestMonsterHunter\TestMonsterHunter.csproj", "{D6DB61EF-98D9-417D-9884-EFBD067B650D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15F9F63F-5386-405F-91E5-91502F2F07B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F9F63F-5386-405F-91E5-91502F2F07B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F9F63F-5386-405F-91E5-91502F2F07B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F9F63F-5386-405F-91E5-91502F2F07B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6DB61EF-98D9-417D-9884-EFBD067B650D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6DB61EF-98D9-417D-9884-EFBD067B650D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6DB61EF-98D9-417D-9884-EFBD067B650D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6DB61EF-98D9-417D-9884-EFBD067B650D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37930E6A-8415-4C35-8EA7-7E42306E6EF9}
+	EndGlobalSection
+EndGlobal
