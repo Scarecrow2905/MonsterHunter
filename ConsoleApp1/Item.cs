@@ -13,12 +13,15 @@ namespace MonsterHunter
         public string Description { get; set; }
         public int Quantity { get; set; }
 
-        public Item(string name, string type, string description, int quantity)
+        protected Item(string name, string type, string description, int quantity)
         {
             Name = name;
             Type = type;
             Description = description;
             Quantity = quantity;
         }
+
+        //public abstract void Use();
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterHunter
 {
-    internal class Palico
+    public class Palico
     {
         public string Name { get; set; }
         public string Type { get; set; }

@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace MonsterHunter
 {
-    internal class HealingPotion : Potion
+    internal class HealingPotion : Potion // <--- Arvet fra Potion og Potion har alle attributes fra Item
     {
-      
-        public HealingPotion():base ("HealingPotion", "Potion", "Description", 3, true )
-        {
+        public string PotionType;
 
+        public HealingPotion(string name, string type, string description, int quantity, bool activeBuff, string potionType) 
+            :base (name, type, description, 10, true)
+        {
+            PotionType = potionType;
         }
     }
 }
