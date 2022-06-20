@@ -10,15 +10,11 @@ namespace MonsterHunter
     {
         static void Main(string[] args)
         {
-            var player = new MyCharacter("Tommy", "Male");
-
-            Menu.ViewLogo();
+            var meny = new Menu();
+            meny.ViewLogo();
             Console.ReadKey();
-            Menu.ViewMainMenu();
+            meny.View();
             Console.ReadKey();
         }
-
-
-
     }
 }

@@ -7,23 +7,35 @@ using System.Threading.Tasks;
 
 namespace MonsterHunter
 {
-    internal class Menu
+    public class Menu
     {
         public string[] Options;
         public string Examples;
         public int Selection;
+        public Hub hub;
 
-
-        public Menu(string[] options, string examples, int Selection)
+        public Menu()
         {
-            Options = options;
-            Examples = examples;
+            hub = new Hub();
+            setMenu();
+            //Examples = examples;
             Selection = 0;
+        }
+
+        public void setMenu()
+        {
+            Options = new string[]
+            {
+                "Missions",
+                "Farm",
+                "Hub",
+                "Item box"
+            };
         }
 
         public void ShowOptions()
         {
-            Console.WriteLine(Examples);
+            //Console.WriteLine(Examples);
             for (int i = 0; i < Options.Length; i++)
             {
                 string currentOption = Options[i];
@@ -45,20 +57,18 @@ namespace MonsterHunter
             }
         }
 
-        public static void ViewMainMenu() // Creds til Kamil!!
+        public void View() // Creds til Kamil!!
         {
-            string front = "";
-            string[] options =
-            {
-                "Missions",
-                "Farm",
-                "Hub",
-                "Item box"
-            };
+            var Selection = Run();
+            ShowOptions();
+            MainMenuChoices(Selection);
+            Console.Clear();
+        }
 
-            Menu mainMenu1 = new Menu(options, front, 0);
-            var Selection = mainMenu1.Run();
-            mainMenu1.ShowOptions();
+
+
+        private void MainMenuChoices(int Selection)
+        {
             switch (Selection)
             {
                 case 0:
@@ -75,21 +85,19 @@ namespace MonsterHunter
 
                 case 2:
                     Console.Clear();
-                    Console.WriteLine("View Hub");
-                    Hub.View();
+                    Console.WriteLine("Hub");
+                    hub.View(this);
                     break;
 
                 case 3:
                     Console.Clear();
-                    Console.WriteLine("View Item Box"); 
+                    Console.WriteLine("View Item Box");
                     ItemBox.View();
                     break;
             }
-
-            Console.Clear();
         }
 
-        public static void ViewLogo()
+        public void ViewLogo()
         {
             Console.WriteLine(@" 
                   __  __                 _              _    _             _            
@@ -128,6 +136,7 @@ namespace MonsterHunter
                         Selection = 0;
                     }
                 }
+
             } while (pressed != ConsoleKey.Enter);
 
             return Selection;
